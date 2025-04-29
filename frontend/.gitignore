@@ -29,3 +29,6 @@ dist-ssr
 *.webp
 
 frontend/src/assets/frontend_assets/
+
+.env
+"backend/.env" 
