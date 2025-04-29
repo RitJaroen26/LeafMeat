@@ -1,0 +1,126 @@
+.add {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+.add form {
+    gap: 20px;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.add-img-upload img {
+    width: 120px;
+}
+
+.add-product-name {
+    width: max(40%, 280px);
+}
+
+.add-product-name .input-name {
+    border: 1px solid #e0e0e0;
+    background-color: #e8e8e8;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.add-product-description {
+    width: max(40%, 280px);
+}
+
+.add-product-description textarea {
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    padding: 10px;
+    background-color: #e8e8e8;
+}
+
+.add-category-price {
+    display: flex;
+    gap: 30px;
+}
+
+.add-category-price select, .input-price {
+    max-width: 120px;
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background-color: #e8e8e8;
+}
+
+.add-btn {
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.add-btn:hover {
+    background-color: #6d6d6d;
+}
+
+/* // .add {
+//     width: 70%;
+//     margin-left: max(5vw, 25px);
+//     margin-top: 50px;
+//     color: #6d6d6d;
+//     font-size: 16px;
+
+//     form {
+//         gap: 20px;
+
+//         .add-img-upload img {
+//             width: 120px;
+//         }
+
+//         .add-product-name {
+//             width: max(40%, 280px);
+
+//             input {
+//                 border: 1px solid #232323;
+//                 padding: 10px;
+//             }
+//         }
+
+//         .add-product-description {
+//             width: max(40%, 280px);
+
+//             textarea {
+//                 border: 1px solid #232323;
+//                 padding: 10px;
+//             }
+//         }
+        
+//         .add-category-price {
+//             display: flex;
+//             gap: 30px;
+
+//             select, input {
+//                 max-width: 120px;
+//                 padding: 10px;
+//                 border: 1px solid #232323;
+//             }
+
+//         }
+
+//         .add-btn {
+//             max-width: 120px;
+//             border: none;
+//             padding: 10px;
+//             background-color: black;
+//             color: #fff;
+//             cursor: pointer;
+//         }
+//     }
+    
+    
+// } */

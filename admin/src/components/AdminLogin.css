@@ -1,0 +1,88 @@
+.admin-login-popup {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-login-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: white; 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+    position: relative;
+    z-index: 10000; /* ป้องกันถูกบัง */
+}
+
+.admin-login-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.admin-login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-login-popup-inputs input, .name-input-for-register {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.admin-login-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: #2563eb;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.admin-login-popup-condition {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: -15px;
+}
+
+.admin-login-popup-condition input {
+    margin-top: 5px;
+}
+
+.admin-login-popup-condition p {
+    color: #1b1b1b;
+}
+
+.create-a-new-account,
+.already-have-an-account {
+    color: #1b1b1b;
+}
+
+.change-login {
+    cursor: pointer;
+    color: gray;
+}

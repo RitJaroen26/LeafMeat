@@ -1,0 +1,15 @@
+.search-bar {
+  display: none;
+  position: relative;
+  margin-top: 20px;
+}
+
+.search-bar.active {
+  display: block;
+}
+
+.food-item {
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}

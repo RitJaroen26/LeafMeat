@@ -1,0 +1,107 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 4%;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-logo {
+    width: max(10%, 80px);
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar-login-btn {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    width: 10% auto;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-login-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.nav-admin-profile {
+    position: relative;
+}
+
+.nav-admin-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;    
+}
+
+.nav-admin-profile:hover .nav-admin-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-admin-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-admin-profile-dropdown img {
+    width: 20px;
+}
+
+.nav-admin-profile-dropdown li:hover {
+    color: tomato;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        gap: 10px;
+        padding: 12px 5%;
+    }
+  
+    .navbar-logo {
+        width: 100px;
+    }
+  
+    .navbar-button {
+        align-self: flex-end;
+        padding: 8px 16px;
+        font-size: 13px;
+        width: auto;
+    }
+}
+  
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .navbar-logo {
+        width: 90px;
+    }
+
+    .navbar-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
