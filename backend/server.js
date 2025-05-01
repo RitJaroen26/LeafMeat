@@ -13,23 +13,32 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 const allowedOrigins = [
-    'https://leafmeat-food.onrender.com',
-    'https://leafmeat-food-admin.onrender.com'
-];
+    "https://leafmeat-food.onrender.com",
+    "https://leafmeat-food-admin.onrender.com"
+  ];
+  
+  const corsOptions = {
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    allowedHeaders: ["Content-Type", "Authorization"]
+  };
+  
+  // ✅ ใช้กับทุก request รวมถึง preflight
+  app.use(cors(corsOptions));
+  app.options("*", cors(corsOptions)); // สำคัญมาก! จัดการ preflight OPTIONS ทุก route
+  
 
 // middleware
 app.use(express.json());
-app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        }
-        else {
-            callback(new Error('Not allowed by CROS'))
-        }
-    },
-    credentials: true
-}));
+
+
 
 // app.use(cors({
 //     origin: ["https://leafmeat-food.onrender.com", "https://leafmeat-food-admin.onrender.com/"], 
