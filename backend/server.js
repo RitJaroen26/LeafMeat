@@ -12,12 +12,29 @@ import adminRouter from "./routes/adminRoute.js";
 const app = express();
 const port = process.env.PORT || 4000;
 
+const allowedOrigins = [
+    'https://leafmeat-food.onrender.com',
+    'https://leafmeat-food-admin.onrender.com'
+];
+
 // middleware
 app.use(express.json());
 app.use(cors({
-    origin: ["https://leafmeat-food.onrender.com", "https://leafmeat-food-admin.onrender.com/"], 
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        }
+        else {
+            callback(new Error('Not allowed by CROS'))
+        }
+    },
     credentials: true
 }));
+
+// app.use(cors({
+//     origin: ["https://leafmeat-food.onrender.com", "https://leafmeat-food-admin.onrender.com/"], 
+//     credentials: true
+// }));
 
 // db connection
 connectDB();
