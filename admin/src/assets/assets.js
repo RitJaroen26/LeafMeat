@@ -22,4 +22,4 @@ export const assets ={
     Home_icon,
 }
 
-export const url = 'http://localhost:4000'
+export const url = 'https://leafmeat-backend-server.onrender.com/'

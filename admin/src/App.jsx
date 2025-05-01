@@ -12,7 +12,7 @@ import AdminHome from './pages/AdminHome';
 import Dashboard from './pages/Dashboard';
 
 function App() {
-  const url = "http://localhost:4000";
+  const url = "https://leafmeat-backend-server.onrender.com/";
   const [showLogin, setShowLogin] = useState(false);
 
   return (

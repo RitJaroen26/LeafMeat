@@ -19,7 +19,7 @@ const AdminHome = ({ url }) => {
             }
 
             try {
-                const response = await axios.get("http://localhost:4000/api/admin/profile", {
+                const response = await axios.get("https://leafmeat-backend-server.onrender.com/api/admin/profile", {
                     headers: {
                         Authorization: `Bearer ${adminToken}`,
                     },

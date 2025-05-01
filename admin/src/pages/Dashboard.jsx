@@ -13,7 +13,7 @@ const Dashboard = () => {
         const fetchStats = async () => {
             try {
                 const token = localStorage.getItem('adminToken');
-                const response = await axios.get("http://localhost:4000/api/admin/stats", {
+                const response = await axios.get("https://leafmeat-backend-server.onrender.com/api/admin/stats", {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
