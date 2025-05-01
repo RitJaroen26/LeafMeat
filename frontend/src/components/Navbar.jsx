@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './Navbar.css'
 import { assets } from '../assets/frontend_assets/assets';
-import Shopping from '../assets/frontend_assets/shopping_cart_24dp_000000_FILL0_wght400_GRAD0_opsz24.png'
+import shopping from '../assets/frontend_assets/shopping_cart_24dp_000000_FILL0_wght400_GRAD0_opsz24.png'
 import Search from '../assets/frontend_assets/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from './StoreContext';
@@ -62,7 +62,7 @@ const Navbar = ({setShowLogin, currentUser, setCurrentUser }) => {
             <div className='navbar-right'>
                 <img className='shopping-img' src={Search} alt="" onClick={() => setSearchPopup(true)}/>
                 <div className='navbar-search-icon'>
-                    <Link to='/cart'><img className='shopping-img' src={Shopping} alt="" /></Link>
+                    <Link to='/cart'><img className='shopping-img' src={shopping} alt="" /></Link>
                     <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
                 </div>
                 {/* <button onClick={Logout}>Logout</button> */}
