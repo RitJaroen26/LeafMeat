@@ -1,6 +1,6 @@
 import adminModel from "../models/adminModels.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import validator from "validator";
 import userModel from "../models/userModel.js";
 import orderModel from "../models/orderModel.js";
