@@ -24,11 +24,11 @@ dist-ssr
 *.sw?
 *.jpg
 *.jpeg
-*.png
 *.gif
 *.webp
 
 frontend/src/assets/frontend_assets/
+!frontend/src/assets/frontend_assets/*.png
 
 ".env"
 "backend/.env" 

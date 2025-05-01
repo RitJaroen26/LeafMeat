@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Navbar.css'
 import { assets } from '../assets/frontend_assets/assets';
 import shopping from '../assets/frontend_assets/shopping_cart_24dp_000000_FILL0_wght400_GRAD0_opsz24.png'
-import Search from '../assets/frontend_assets/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.png'
+import search from '../assets/frontend_assets/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from './StoreContext';
 import axios from "axios";
@@ -24,24 +24,6 @@ const Navbar = ({setShowLogin, currentUser, setCurrentUser }) => {
         navigate("/");
     }
 
-    // useEffect(() => {
-    //     axios.get("http://localhost/App1/food_web_app/server_php/src/Profile.php").then((response) => {
-    //         if (response.data.status === 'success') {
-    //             setUser(response.data.currentUser);
-    //         }
-    //     });
-    // }, [currentUser]);
-
-    // useEffect(() => {
-    //     if (currentUser) {
-    //         axios.get(`http://localhost:5000/profile?userId=${currentUser.id}`).then((response) => {
-    //             if (response.data.status === 'success') {
-    //                 setUser(response.data.user);
-    //             }
-    //         });
-    //     }
-    // }, [currentUser]);
-
     const handleSearch = (event) => {
         const term = event.target.value.toLowerCase();
         setSearchTerm(term);
@@ -60,7 +42,7 @@ const Navbar = ({setShowLogin, currentUser, setCurrentUser }) => {
                 <a href='#footer' onClick={() => setMenu("contract-us")} className={menu==="contract-us"?"active":""}>Contract Us</a>
             </ul>
             <div className='navbar-right'>
-                <img className='shopping-img' src={Search} alt="" onClick={() => setSearchPopup(true)}/>
+                <img className='shopping-img' src={search} alt="" onClick={() => setSearchPopup(true)}/>
                 <div className='navbar-search-icon'>
                     <Link to='/cart'><img className='shopping-img' src={shopping} alt="" /></Link>
                     <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
