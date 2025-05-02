@@ -27,12 +27,12 @@ const allowedOrigins = [
     },
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
-    allowedHeaders: ["Content-Type", "Authorization"]
+    allowedHeaders: ["Content-Type", "Authorization", "token"]
   };
   
   // ✅ ใช้กับทุก request รวมถึง preflight
   app.use(cors(corsOptions));
-  app.options("*", cors(corsOptions)); // สำคัญมาก! จัดการ preflight OPTIONS ทุก route
+  app.options("*", cors(corsOptions));
   
 
 // middleware
