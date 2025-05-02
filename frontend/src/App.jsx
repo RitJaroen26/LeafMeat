@@ -43,7 +43,7 @@ const App = () => {
           } />
           <Route path='/cart' element={<Cart />} />
           {/* <Route path='/profile' element={<Profile />}/> */}
-          <Route path='/userorders' element={<PlaceOrder />} />
+          <Route path='/order' element={<PlaceOrder />} />
           {/* <Route path='/profile' element={<Profile currentUser={currentUser} setCurrentUser={setCurrentUser} />}/> */}
           <Route 
             path='/profile' 
