@@ -7,10 +7,6 @@ const orderRouter = express.Router();
 orderRouter.post("/place", authMiddleware, placeOrder);
 orderRouter.post("/verify", verifyOrder);
 orderRouter.post("/userorders", authMiddleware, userOrders);
-orderRouter.post("/userorders", (req, res) => {
-    console.log("/userorders hit");
-    res.send({ message: "userorders rooute works" });
-})
 orderRouter.get("/list", listOrders);
 orderRouter.post("/status", updateStatus);
 
