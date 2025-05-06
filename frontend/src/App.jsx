@@ -67,7 +67,17 @@ const App = () => {
             }
           /> */}
           <Route path='/verify' element={<Verify />} />
-          <Route path='/myorders' element={<MyOrders />} />
+          <Route 
+            path='/myorders' 
+            element={ currentUser ? (
+              <MyOrders />
+            ) : (
+              <Login setShowLogin={setShowLogin} setUser={(user) => {
+                setCurrentUser(user);
+                localStorage.setItem("user", JSON.stringify(user));
+              }} />
+            )} 
+          />
         </Routes>
       </div>
       <Footer />
