@@ -6,7 +6,10 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
     
     const [cartItem, setCartItem] = useState({});
-    const url = "https://leafmeat-backend-server.onrender.com";
+    // const url = "https://leafmeat-backend-server.onrender.com";
+
+    const url = import.meta.env.MODE === "development" ? "http://localhost:4000" : "https://leafmeat-backend-server.onrender.com";
+
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([]);
     

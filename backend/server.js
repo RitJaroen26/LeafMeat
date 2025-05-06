@@ -14,7 +14,8 @@ const port = process.env.PORT || 4000;
 
 const allowedOrigins = [
     "https://leafmeat-food.onrender.com",
-    "https://leafmeat-food-admin.onrender.com"
+    "https://leafmeat-food-admin.onrender.com",
+    "http://localhost:5173",
   ];
   
   const corsOptions = {
